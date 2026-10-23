@@ -1,0 +1,575 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description"
+        content="AceHand Support - Help, multiplayer troubleshooting, and contact information">
+  <title>AceHand - Support</title>
+
+  <style>
+    :root {
+      --bg: #f5f7f9;
+      --card: #ffffff;
+      --text: #202734;
+      --muted: #657080;
+      --accent: #17694c;
+      --border: #e3e7eb;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont,
+        "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 840px;
+      margin: 48px auto;
+      padding: 0 20px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 42px;
+      box-shadow: 0 8px 28px rgba(0,0,0,.035);
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding-bottom: 22px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .brand {
+      font-size: 24px;
+      font-weight: 750;
+      letter-spacing: -0.5px;
+    }
+
+    .subtitle {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .language {
+      display: flex;
+      gap: 6px;
+    }
+
+    button {
+      border: 1px solid var(--border);
+      background: white;
+      color: var(--text);
+      padding: 8px 13px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 13px;
+    }
+
+    button.active {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: white;
+    }
+
+    button:focus-visible,
+    a:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+    }
+
+    h1 {
+      font-size: 30px;
+      letter-spacing: -0.7px;
+      margin: 30px 0 5px;
+    }
+
+    h2 {
+      font-size: 18px;
+      margin-top: 32px;
+      margin-bottom: 8px;
+      color: var(--accent);
+    }
+
+    p {
+      margin: 10px 0;
+    }
+
+    ul {
+      padding-left: 23px;
+      margin: 14px 0;
+    }
+
+    li {
+      margin: 12px 0;
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 28px;
+    }
+
+    .notice {
+      background: #f0f7f3;
+      border-left: 4px solid var(--accent);
+      padding: 17px 20px;
+      border-radius: 6px;
+      margin: 25px 0;
+    }
+
+    .warning {
+      background: #fff8eb;
+      border-left: 4px solid #d49a35;
+      padding: 14px 18px;
+      border-radius: 6px;
+      margin: 22px 0;
+    }
+
+    a {
+      color: var(--accent);
+      overflow-wrap: anywhere;
+    }
+
+    .contact-button {
+      display: inline-block;
+      background: var(--accent);
+      color: #ffffff;
+      padding: 11px 20px;
+      border-radius: 9px;
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: 10px;
+    }
+
+    .contact-button:hover {
+      background: #12563d;
+    }
+
+    .legal-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin-top: 12px;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 12px;
+      margin: 24px 0 40px;
+    }
+
+    [hidden] {
+      display: none !important;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        margin: 14px auto;
+        padding: 0 12px;
+      }
+
+      .card {
+        padding: 22px;
+        border-radius: 12px;
+      }
+
+      h1 {
+        font-size: 26px;
+      }
+
+      header {
+        align-items: flex-start;
+      }
+
+      .brand {
+        font-size: 21px;
+      }
+
+      button {
+        padding: 7px 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+<div class="container">
+  <main class="card">
+
+    <header>
+      <div>
+        <div class="brand">AceHand</div>
+        <div class="subtitle">Help &amp; Support</div>
+      </div>
+
+      <nav class="language" aria-label="Language">
+        <button
+          type="button"
+          id="btn-en"
+          class="active"
+          onclick="setLanguage('en')"
+          aria-pressed="true">
+          English
+        </button>
+
+        <button
+          type="button"
+          id="btn-zh"
+          onclick="setLanguage('zh')"
+          aria-pressed="false">
+          中文
+        </button>
+      </nav>
+    </header>
+
+    <!-- ENGLISH SUPPORT -->
+
+    <article id="content-en" lang="en">
+
+      <h1>AceHand Support</h1>
+
+      <div class="meta">
+        Help Center &amp; Troubleshooting
+      </div>
+
+      <p>
+        Welcome to AceHand Support.
+        If you experience an issue or have questions
+        about the game, please contact us.
+      </p>
+
+      <div class="notice">
+        <strong>Need assistance?</strong>
+        <p>
+          Contact
+          <a href="mailto:support@sun-wave.xyz">
+            support@sun-wave.xyz
+          </a>
+          and include your app version, iOS version,
+          steps to reproduce the issue, and optional
+          screenshots.
+        </p>
+
+        <a class="contact-button"
+           href="mailto:support@sun-wave.xyz?subject=AceHand%20Support%20Request">
+          Contact Support
+        </a>
+      </div>
+
+      <div class="warning">
+        <strong>Protect your privacy:</strong>
+        Never share your Apple Account password.
+        Diagnostic logs should only be sent
+        if you voluntarily choose to share them.
+      </div>
+
+      <h2>Frequently Asked Questions</h2>
+
+      <h2>1. How does single-player mode work?</h2>
+      <p>
+        You can play Texas Hold'em against computer
+        opponents without signing in to Game Center.
+      </p>
+
+      <h2>2. How do I play with friends?</h2>
+      <p>
+        AceHand uses Apple Game Center for
+        multiplayer gameplay.
+      </p>
+      <p>
+        Sign in to Game Center through your device
+        settings and allow the permissions needed
+        for multiplayer features.
+      </p>
+      <p>
+        All participants should use compatible
+        versions of AceHand.
+      </p>
+
+      <h2>3. Why are multiplayer invitations not working?</h2>
+      <p>
+        If you cannot send or receive invitations,
+        please check the following:
+      </p>
+      <ul>
+        <li>
+          Both players are signed in to Game Center.
+        </li>
+        <li>
+          Both devices have a working internet connection.
+        </li>
+        <li>
+          Both players are using compatible app versions.
+        </li>
+        <li>
+          Device settings or system restrictions
+          are not blocking multiplayer features.
+        </li>
+      </ul>
+
+      <h2>4. Where is my hand history stored?</h2>
+      <p>
+        AceHand stores up to 50 recent poker hands
+        locally on your device.
+      </p>
+      <p>
+        The app does not provide its own
+        cloud synchronization service.
+      </p>
+      <p>
+        Deleting the app may remove your
+        locally stored hand history.
+      </p>
+
+      <h2>5. Can I purchase or redeem chips?</h2>
+      <p>
+        No. AceHand uses virtual chips
+        for entertainment only.
+      </p>
+      <p>
+        Virtual chips have no real-world monetary value.
+        The app does not support deposits,
+        chip purchases, cash withdrawals,
+        or chip redemption.
+      </p>
+
+      <h2>6. How can I report a technical problem?</h2>
+      <p>
+        Please email our support team and include:
+      </p>
+      <ul>
+        <li>AceHand app version</li>
+        <li>iOS or iPadOS version</li>
+        <li>Device model, if available</li>
+        <li>Steps to reproduce the issue</li>
+        <li>Optional screenshots</li>
+      </ul>
+      <p>
+        You may also share diagnostic logs
+        if you choose to do so.
+        Logs are not automatically sent to us.
+      </p>
+
+      <h2>7. Privacy and Legal Information</h2>
+      <p>
+        For information about how AceHand handles
+        your information, please review:
+      </p>
+
+      <div class="legal-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+      </div>
+
+      <h2>Contact Information</h2>
+      <p>
+        <strong>Sun Wave Consultant LLC</strong>
+      </p>
+      <p>
+        Email:
+        <a href="mailto:support@sun-wave.xyz">
+          support@sun-wave.xyz
+        </a>
+      </p>
+
+    </article>
+
+    <!-- CHINESE SUPPORT -->
+
+    <article id="content-zh" lang="zh-CN" hidden>
+
+      <h1>AceHand 用户支持</h1>
+
+      <div class="meta">
+        帮助中心与故障排查
+      </div>
+
+      <p>
+        欢迎访问 AceHand 用户支持页面。
+        如果你在使用游戏过程中遇到问题，
+        或者对游戏功能有任何疑问，
+        欢迎通过电子邮件联系我们。
+      </p>
+
+      <div class="notice">
+        <strong>需要帮助？</strong>
+        <p>
+          请发送邮件至
+          <a href="mailto:support@sun-wave.xyz">
+            support@sun-wave.xyz
+          </a>，
+          并尽可能提供应用版本、iOS 版本、
+          问题发生步骤以及可选截图。
+        </p>
+
+        <a class="contact-button"
+           href="mailto:support@sun-wave.xyz?subject=AceHand%20Support%20Request">
+          联系客服
+        </a>
+      </div>
+
+      <div class="warning">
+        <strong>保护个人隐私：</strong>
+        请不要提供 Apple 账号密码。
+        只有在你自愿的情况下，
+        才需要分享诊断日志。
+      </div>
+
+      <h2>常见问题</h2>
+
+      <h2>1. 如何使用单机模式？</h2>
+      <p>
+        AceHand 支持与电脑玩家进行德州扑克对局。
+        单机模式无需登录 Game Center。
+      </p>
+
+      <h2>2. 如何与好友联机？</h2>
+      <p>
+        AceHand 使用 Apple Game Center
+        提供多人联机功能。
+      </p>
+      <p>
+        请在设备设置中登录 Game Center，
+        并允许使用多人游戏所需的相关权限。
+      </p>
+      <p>
+        所有参与者应安装兼容版本的 AceHand。
+      </p>
+
+      <h2>3. 无法发送或接收好友邀请怎么办？</h2>
+      <p>
+        如果好友邀请无法正常使用，
+        请检查以下项目：
+      </p>
+      <ul>
+        <li>双方是否已经登录 Game Center。</li>
+        <li>双方设备是否具有正常的网络连接。</li>
+        <li>双方是否使用兼容的应用版本。</li>
+        <li>
+          设备设置或系统限制是否阻止了多人游戏功能。
+        </li>
+      </ul>
+
+      <h2>4. 牌局记录保存在哪里？</h2>
+      <p>
+        AceHand 在本机保存最近最多 50 手牌局记录。
+      </p>
+      <p>
+        应用不提供自有的云端同步服务。
+        删除应用可能导致本地牌局记录丢失。
+      </p>
+
+      <h2>5. 可以购买或兑换筹码吗？</h2>
+      <p>
+        不可以。
+        AceHand 的虚拟筹码仅用于娱乐，
+        不具有现实货币价值。
+      </p>
+      <p>
+        游戏不支持充值、筹码购买、
+        现金提现或筹码兑换。
+      </p>
+
+      <h2>6. 如何报告技术问题？</h2>
+      <p>
+        请通过电子邮件联系客服，
+        并尽可能提供：
+      </p>
+      <ul>
+        <li>AceHand 应用版本</li>
+        <li>iOS 或 iPadOS 版本</li>
+        <li>设备型号（如方便提供）</li>
+        <li>问题发生的具体步骤</li>
+        <li>可选的截图</li>
+      </ul>
+      <p>
+        如果你愿意，也可以主动分享诊断日志。
+        应用不会自动向我们发送这些日志。
+      </p>
+
+      <h2>7. 隐私与法律信息</h2>
+      <p>
+        有关 AceHand 如何处理用户信息，
+        请查看以下页面：
+      </p>
+
+      <div class="legal-links">
+        <a href="privacy.html">隐私政策</a>
+        <a href="terms.html">使用条款</a>
+      </div>
+
+      <h2>联系方式</h2>
+      <p>
+        <strong>Sun Wave Consultant LLC</strong>
+      </p>
+      <p>
+        邮箱：
+        <a href="mailto:support@sun-wave.xyz">
+          support@sun-wave.xyz
+        </a>
+      </p>
+
+    </article>
+
+  </main>
+
+  <footer>
+    &copy; 2026 Sun Wave Consultant LLC.
+    All rights reserved.
+  </footer>
+</div>
+
+<script>
+  function setLanguage(language) {
+    const english = language === "en";
+
+    document.getElementById("content-en").hidden = !english;
+    document.getElementById("content-zh").hidden = english;
+
+    document.getElementById("btn-en")
+      .classList.toggle("active", english);
+
+    document.getElementById("btn-zh")
+      .classList.toggle("active", !english);
+
+    document.getElementById("btn-en")
+      .setAttribute("aria-pressed", String(english));
+
+    document.getElementById("btn-zh")
+      .setAttribute("aria-pressed", String(!english));
+
+    document.documentElement.lang =
+      english ? "en" : "zh-CN";
+
+    document.title = english
+      ? "AceHand - Support"
+      : "AceHand - 用户支持";
+  }
+
+  const preferredLanguage =
+    navigator.language.toLowerCase().startsWith("zh")
+      ? "zh"
+      : "en";
+
+  setLanguage(preferredLanguage);
+</script>
+</body>
+</html>
